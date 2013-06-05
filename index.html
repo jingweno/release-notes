@@ -5,12 +5,10 @@ title: Release Notes
 
 <div id="home">
   {% for category in site.categories %}
-    {% if category[0] != "notes" %}
-      <h1>{{ category[0] | join: "/" }}</h1>
-      <ul>
-        {% assign notes_list = category[1] %}
-        {% include JB/notes_list %}
-      </ul>
-    {% endif %}
+    <h1>{{ category[0] | join: "/" }}</h1>
+    <ul>
+      {% assign notes_list = category[1] %}
+      {% include JB/notes_list %}
+    </ul>
   {% endfor %}
 </div>

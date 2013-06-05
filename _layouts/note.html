@@ -3,9 +3,7 @@ layout: default
 ---
 
 {% for category in page.categories %}
-  {% if category != "notes" %}
-    <h1>{{ category | join: "/" }}</h1>
-  {% endif %}
+  <h1>{{ category | join: "/" }}</h1>
 {% endfor %}
 <h2>{{ page.title }}</h2>
 {% if page.source_url != null %}
